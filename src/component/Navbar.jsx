@@ -7,9 +7,8 @@ import { NavLink } from "react-router-dom";
 import Modal from "./Modal";
 import logo from '../assets/logo.webp';
 
-export default function Example() {
+export default function Example({showModal,setShowModal}) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [showModal, setShowModal] = useState(false);
 
   return (
     <div className="sticky drop-shadow-xl border border-black shadow-black top-0 z-50 bg-[#24262B]">
