@@ -1,12 +1,11 @@
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import {
-  AiOutlineMenu,
-  AiOutlineClose,
   AiOutlineShoppingCart,
 } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 import Modal from "./Modal";
+import logo from '../assets/logo.webp';
 
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -20,27 +19,10 @@ export default function Example() {
             className="flex h-9 items-center justify-between"
             aria-label="Global"
           >
-            <NavLink to="/"></NavLink>
-            {!mobileMenuOpen ? (
-              <div className="flex lg:hidden">
-                <button
-                  type="button"
-                  className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-                  onClick={() => setMobileMenuOpen(true)}
-                >
-                  <AiOutlineMenu className="text-black" />
-                </button>
-              </div>
-            ) : (
-              <button
-                type="button"
-                className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                <AiOutlineClose className="text-black" />
-              </button>
-            )}
-            <div className="hidden lg:flex items-center lg:gap-x-5">
+            <div>
+              <img src={logo} alt="logo" className="w-28"/>
+            </div>
+            <div className="flex items-center gap-x-5">
               <button
                 onClick={() => setShowModal(true)}
                 className="text-md cursor-pointer font-[400] text-slate-300 shadow-[#E8296F]"
@@ -60,12 +42,6 @@ export default function Example() {
                 <Modal showModal={showModal} setShowModal={setShowModal} />
               )}
               <AiOutlineShoppingCart className="text-xl cursor-pointer font-[500] text-white shadow-[#E8296F]" />
-            </div>
-            <div className="lg:hidden block ">
-              <button className="bg-[#FF5300] text-white px-5 py-2 font-[500] rounded-full">
-                Connect Ledger wallet
-              </button>
-             
             </div>
           </nav>
           <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>

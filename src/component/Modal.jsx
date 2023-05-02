@@ -11,10 +11,14 @@ import metamask from "../assets/metamask.png";
 import WalletConnectModal from "./WalletConnectModal";
 import ImportWallet from "./ImportWallet";
 
-const SignInModal = ({ exsistAcc, setExsistAcc, setUser }) => (
-  <div className="bg-[#1C1E22] z-10 rounded-sm lg:mt-20 border border-[#1c1d20] drop-shadow-xl">
-    <div className="grid grid-cols-2 overflow-y-auto lg:w-[850px]">
-      <div>
+const SignInModal = ({ exsistAcc, setExsistAcc, setUser, setShowModal }) => (
+  <div className="bg-[#1C1E22] z-10 rounded-sm lg:mt-20  border border-[#1c1d20] drop-shadow-xl">
+    <div className="grid lg:grid-cols-2 grid-cols-1 overflow-y-auto lg:w-[850px] w-full">
+      <AiOutlineClose
+        onClick={() => setShowModal(false)}
+        className="absolute right-2 top-2 z-10 cursor-pointer text-slate-200 text-xl font-[600]"
+      />
+      <div className="lg:block hidden">
         <img src={playerimg} alt="playerimg" className="" />
       </div>
       <div className="loginbg relative">
@@ -68,7 +72,7 @@ const SignInModal = ({ exsistAcc, setExsistAcc, setUser }) => (
         <img
           src={login}
           alt="login"
-          className="w-full absolute bottom-0  px-10"
+          className="w-full lg:absolute bottom-0  px-10"
         />
       </div>
     </div>
@@ -160,9 +164,9 @@ const WalletModal = ({
   </div>
 );
 
-const Modal = () => {
+const Modal = ({ setShowModal }) => {
   const [exsistAcc, setExsistAcc] = useState(true);
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(false);
   const [importWallet, setImportWallet] = useState(false);
   const [walletCn, setWalletCn] = useState(false);
 
@@ -178,6 +182,7 @@ const Modal = () => {
         />
       ) : (
         <SignInModal
+          setShowModal={setShowModal}
           setUser={setUser}
           exsistAcc={exsistAcc}
           setExsistAcc={setExsistAcc}

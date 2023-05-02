@@ -6,9 +6,9 @@ import SimpleSlider from "./SimpleSlider";
 const Banner = () => {
   return (
     <div className=" pt-0 banner">
-      <div className=" container mx-auto  grid grid-cols-2 ju">
+      <div className=" container mx-auto flex lg:flex-row flex-col-reverse">
         <div class="p-5">
-          <div class="flex flex-col space-y-10">
+          <div class="flex flex-col lg:items-start items-center lg:space-y-10 space-y-5">
             <div class="text-2xl text-white font-[400] uppercase">
               Sign Up &amp; <span class="text-[#3BC117]">Get</span> Reward
             </div>
@@ -16,7 +16,7 @@ const Banner = () => {
               <span>Up to</span>
               <b class="text-grad"> ৳ 2,100,000</b>
             </div>
-            <div class="flex items-center space-x-5">
+            <div class="flex lg:flex-row flex-col items-center lg:space-x-5 space-y-5">
               <button class="btn-grad text-white font-[500] px-8 py-3">
                 Sign Up Now
               </button>
@@ -31,7 +31,7 @@ const Banner = () => {
           <img src={players} />
         </div>
       </div>
-      <SimpleSlider/>
+      <SimpleSlider />
     </div>
   );
 };

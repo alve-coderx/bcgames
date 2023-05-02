@@ -21,7 +21,7 @@ const SimpleSlider = () => {
   };
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto lg:block hidden">
       <Slider {...settings}>
         {
           banners.map((banner) => (

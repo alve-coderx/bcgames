@@ -22,7 +22,7 @@ const Banner = ({ title, color, img, desc, btnTxt, btnBG, icon }) => (
 
 const Sports = () => {
   return (
-    <div className="grid grid-cols-2 gap-2 container mx-auto py-10">
+    <div className="grid lg:grid-cols-2 grid-cols-1 gap-2 container mx-auto py-10">
       <Banner
         btnTxt="Go to Casino"
         img={casino}
