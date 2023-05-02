@@ -12,7 +12,7 @@ const Banner = () => {
             <div class="text-2xl text-white font-[400] uppercase">
               Sign Up &amp; <span class="text-[#3BC117]">Get</span> Reward
             </div>
-            <div class="text-6xl uppercase font-[600] text-white">
+            <div class="lg:text-6xl text-3xl uppercase font-[600] text-white">
               <span>Up to</span>
               <b class="text-grad"> ৳ 2,100,000</b>
             </div>
