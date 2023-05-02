@@ -171,7 +171,7 @@ const Modal = ({ setShowModal }) => {
   const [walletCn, setWalletCn] = useState(false);
 
   return (
-    <div className="transition-10 duration-50 justify-center items-center flex fixed inset-0 top-96 outline-0 ">
+    <div className="transition-10 duration-50 justify-center items-center flex fixed inset-0 lg:top-96 outline-0 ">
       {user ? (
         <WalletModal
           setWalletCn={setWalletCn}
