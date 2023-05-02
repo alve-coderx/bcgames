@@ -71,8 +71,8 @@ const ImportWallet = ({ setImportWallet }) => {
             disabled={!pass}
             className={
               pass
-                ? "bg-[#3BC117] text-white w-full px-5 py-4 rounded-md hover:opacity-80 shadhow-xl font-[700] mb-1 mt-2 transition duration-300 ease-in-out outline-0"
-                : "bg-[#3BC117] text-white opacity-20 w-full px-5 py-4 rounded-md  shadhow-xl font-[700] mb-1 mt-2 transition duration-300 ease-in-out outline-0"
+                ? "bg-[#3BC117] lg:text-md text-xs text-white w-full px-2 py-4 rounded-md hover:opacity-80 shadhow-xl font-[700] mb-1 mt-2 transition duration-300 ease-in-out outline-0"
+                : "bg-[#3BC117] lg:text-md text-xs text-white opacity-20 w-full px-2 py-4 rounded-md  shadhow-xl font-[700] mb-1 mt-2 transition duration-300 ease-in-out outline-0"
             }
           >
             Connect Wallet With bc.game
