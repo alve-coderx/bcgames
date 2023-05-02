@@ -1,6 +1,7 @@
 import React from "react";
 import players from "../assets/players.png";
 import social from "../assets/social.PNG";
+import socialsm from "../assets/socialsm.PNG";
 import SimpleSlider from "./SimpleSlider";
 
 const Banner = () => {
@@ -9,7 +10,7 @@ const Banner = () => {
       <div className=" container mx-auto flex lg:flex-row flex-col-reverse">
         <div class="p-5">
           <div class="flex flex-col lg:items-start items-center lg:space-y-10 space-y-5">
-            <div class="text-2xl text-white font-[400] uppercase">
+            <div class="lg:text-2xl text-lg text-white font-[400] uppercase">
               Sign Up &amp; <span class="text-[#3BC117]">Get</span> Reward
             </div>
             <div class="lg:text-6xl text-3xl uppercase font-[600] text-white">
@@ -22,7 +23,8 @@ const Banner = () => {
               </button>
               <div class="text-xl text-slate-300 text-white">or</div>
               <div class="other-group">
-                <img src={social} />
+                <img src={social} className="lg:block hidden" />
+                <img src={socialsm} className="lg:hidden block " />
               </div>
             </div>
           </div>
