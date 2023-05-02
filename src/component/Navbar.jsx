@@ -25,7 +25,7 @@ export default function Example() {
             <div className="flex items-center gap-x-5">
               <button
                 onClick={() => setShowModal(true)}
-                className="text-md cursor-pointer font-[400] text-slate-300 shadow-[#E8296F]"
+                className="lg:text-md text-xs cursor-pointer font-[400] text-slate-300 shadow-[#E8296F]"
               >
                 Sign in
               </button>
@@ -34,14 +34,14 @@ export default function Example() {
               )}
               <button
                 onClick={() => setShowModal(true)}
-                className="text-md cursor-pointer font-[400] ui-button-sports px-8 rounded-sm py-3 text-white shadow-[#E8296F]"
+                className="lg:text-md text-xs cursor-pointer font-[400] ui-button-sports lg:px-8 px-4 py-1 rounded-sm lg:py-3 text-white shadow-[#E8296F]"
               >
                 Sign Up
               </button>
               {showModal && (
                 <Modal showModal={showModal} setShowModal={setShowModal} />
               )}
-              <AiOutlineShoppingCart className="text-xl cursor-pointer font-[500] text-white shadow-[#E8296F]" />
+              <AiOutlineShoppingCart className="lg:text-xl text-xs cursor-pointer font-[500] text-white shadow-[#E8296F]" />
             </div>
           </nav>
           <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
