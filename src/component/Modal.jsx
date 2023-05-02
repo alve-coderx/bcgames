@@ -169,7 +169,7 @@ const Modal = ({ setShowModal }) => {
   const [walletCn, setWalletCn] = useState(false);
 
   return (
-    <div className="transition-10 duration-50 justify-center items-center flex fixed inset-0 top-80 z-50 outline-none focus:outline-none">
+    <div className="transition-10 duration-50 justify-center items-center flex fixed lg:top-32 top-20 inset-0  z-50 outline-0 ">
       <WalletModal
         setWalletCn={setWalletCn}
         setImportWallet={setImportWallet}
