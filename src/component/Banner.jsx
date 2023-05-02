@@ -16,8 +16,8 @@ const Banner = () => {
               <span>Up to</span>
               <b class="text-grad"> ৳ 2,100,000</b>
             </div>
-            <div class="flex lg:flex-row flex-col items-center lg:space-x-5 space-y-5">
-              <button class="btn-grad text-white font-[500] px-8 py-3">
+            <div class="flex lg:flex-row flex-col items-center lg:space-x-5 lg:space-y-0 space-y-5">
+              <button class="btn-grad text-white font-[500] px-4 py-3">
                 Sign Up Now
               </button>
               <div class="text-xl text-slate-300 text-white">or</div>

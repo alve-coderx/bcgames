@@ -86,32 +86,32 @@ const WalletModal = ({
   importWallet,
   walletCn,
 }) => (
-  <div className="lg:w-[420px] w-[22.6rem]  py-4 lg:px-4 md:px-9 px-4 rounded-3xl  bg-white drop-shadow-2xl">
+  <div className="lg:w-[420px] w-[22.6rem] border border-slate-800 py-4 lg:px-4 md:px-9 px-4 top-0  bg-[#1C1E22] drop-shadow-2xl">
     <>
-      <div className="flex items-center justify-between text-white font-[600] text-lg ">
-        <p className="text-black ">Connect a wallet</p>
+      <div className="flex items-center justify-between font-[600] text-lg ">
+        <p className="text-[#3BC117] text-xl">Connect a wallet</p>
         <AiOutlineClose
           onClick={() => setUser(false)}
-          className="font-[700] cursor-pointer text-black "
+          className="font-[700]  text-xl cursor-pointer text-[#3BC117]  "
         />
       </div>
       <div className="my-4">
         <div
-          className="flex my-4 items-center bg-[#EBEFFF] text-black hover:opacity-80 p-4 space-x-5 rounded-xl cursor-pointer"
+          className="flex my-4 items-center bg-[#3BC117] text-white border hover:opacity-60 p-4 space-x-5 rounded-md cursor-pointer"
           onClick={() => setImportWallet(true)}
         >
           <img src={wall4} alt="dakjdga" className="w-6" />
           <p className="lg:text-lg text-sm font-[600]">Browser Wallet</p>
         </div>
         <div
-          className="flex my-4 items-center bg-[#EBEFFF] text-black hover:opacity-80 p-4 space-x-5 rounded-xl cursor-pointer"
+          className="flex my-4 items-center bg-[#3BC117] text-white border hover:opacity-60 p-4 space-x-5 rounded-md cursor-pointer"
           onClick={() => setWalletCn(true)}
         >
           <img src={walletConnect} alt="dakjdga" className="w-6" />
           <p className="lg:text-lg text-sm font-[600]">WalletConnet </p>
         </div>
         <div
-          className="flex my-4 items-center bg-[#EBEFFF] text-black hover:opacity-80 p-4 space-x-5 rounded-xl cursor-pointer"
+          className="flex my-4 items-center bg-[#3BC117] text-white border hover:opacity-60 p-4 space-x-5 rounded-md cursor-pointer"
           onClick={() => setImportWallet(true)}
         >
           <img className="w-6" src={metamask} alt="dakjdga" />
@@ -119,32 +119,32 @@ const WalletModal = ({
         </div>
 
         <div
-          className="flex my-4 items-center bg-[#EBEFFF] text-black hover:opacity-80 p-4 space-x-5 rounded-xl cursor-pointer"
+          className="flex my-4 items-center bg-[#3BC117] text-white border hover:opacity-60 p-4 space-x-5 rounded-md cursor-pointer"
           onClick={() => setImportWallet(true)}
         >
           <img src={ledger} alt="dakjdga" className="w-6" />
           <p className="lg:text-lg text-sm font-[600]">Ledger Wallet</p>
         </div>
         <div
-          className="flex my-4 items-center bg-[#EBEFFF] text-black hover:opacity-80 p-4 space-x-5 rounded-xl cursor-pointer"
+          className="flex my-4 items-center bg-[#3BC117] text-white border hover:opacity-60 p-4 space-x-5 rounded-md cursor-pointer"
           onClick={() => setImportWallet(true)}
         >
           <img src={trezor} alt="dakjdga" className="w-6" />
           <p className="lg:text-lg text-sm font-[600]">Trezor Wallet</p>
         </div>
         <div
-          className="flex my-4 items-center bg-[#EBEFFF] text-black hover:opacity-80 p-4 space-x-5 rounded-xl cursor-pointer"
+          className="flex my-4 items-center bg-[#3BC117] text-white border hover:opacity-60 p-4 space-x-5 rounded-md cursor-pointer"
           onClick={() => setImportWallet(true)}
         >
           <img src={coinbase} alt="dakjdga" className="w-6" />
           <p className="lg:text-lg text-sm font-[600]">Coinbase Wallet</p>
         </div>
 
-        <p className="text-black font-[500] lg:text-lg text-xs">
+        <p className="text-white font-[400] text-sm">
           By connecting a wallet, you agree to Uniswap Labs’{" "}
-          <span className=" text-[#F73397] mx-2">Terms of Service</span>
+          <span className=" text-[#3BC117] mx-2">Terms of Service</span>
           and consent to its{" "}
-          <span className=" text-[#F73397]">Privacy Policy</span>.
+          <span className=" text-[#3BC117]">Privacy Policy.</span>
         </p>
       </div>
       {walletCn && (
