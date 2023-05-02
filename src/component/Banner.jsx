@@ -3,6 +3,7 @@ import players from "../assets/players.png";
 import social from "../assets/social.PNG";
 import socialsm from "../assets/socialsm.PNG";
 import SimpleSlider from "./SimpleSlider";
+import Modal from "./Modal";
 
 const Banner = ({ showModal, setShowModal }) => {
   return (
@@ -24,6 +25,9 @@ const Banner = ({ showModal, setShowModal }) => {
               >
                 Sign Up Now
               </button>
+              {showModal && (
+                <Modal showModal={showModal} setShowModal={setShowModal} />
+              )}
               <div className="text-xl text-slate-300 text-white">or</div>
               <div className="other-group">
                 <img alt="img" src={social} className="lg:block hidden" />

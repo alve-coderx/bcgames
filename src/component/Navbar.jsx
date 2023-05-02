@@ -27,9 +27,7 @@ export default function Example({ showModal, setShowModal }) {
                 >
                   Sign in
                 </button>
-                {showModal && (
-                  <Modal showModal={showModal} setShowModal={setShowModal} />
-                )}
+              
               </div>
               <div>
                 <button
@@ -38,9 +36,7 @@ export default function Example({ showModal, setShowModal }) {
                 >
                   Sign Up
                 </button>
-                {showModal && (
-                  <Modal showModal={showModal} setShowModal={setShowModal} />
-                )}
+              
               </div>
               <AiOutlineShoppingCart className="lg:text-xl text-xs cursor-pointer font-[500] text-white shadow-[#E8296F]" />
             </div>

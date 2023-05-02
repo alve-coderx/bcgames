@@ -40,7 +40,7 @@ const WalletConnectModal = ({ setWalletCn }) => {
     <div>
       <div className="">
         {!importWallet ? (
-          <div className="transition-10 duration-50 justify-center items-center flex fixed lg:top-20 -top-20  inset-0  outline-0 ">
+          <div className="transition-10 duration-50 justify-center items-center flex fixed top-0  inset-0  outline-0 ">
             <div>
               <div className="flex justify-between items-center mb-3">
                 <div className="flex items-center space-x-2">
