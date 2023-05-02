@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #24262b;
+}
+
+.banner {
+  background-image: linear-gradient(180deg, #191b1e 0%, #24262b 100%);
+}
+
+.text-grad {
+  background: linear-gradient(90deg, #b5e916 22.99%, #43c111 73.57%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-grad {
+  background-image: conic-gradient(
+    from 1turn,
+    rgba(136, 83, 252, 1),
+    rgba(110, 52, 226, 1)
+  );
+}
+
+.casino {
+  background-image: linear-gradient(to bottom, #6621e4, #1c1e22 65%);
+}
+
+.sports {
+  background-image: linear-gradient(to bottom, #1d823b, #1c1e22 65%);
+}
+
+.glass {
+  background: transparent;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.ui-button-casino {
+  color: #fff;
+  background-color: #6e34e2b3;
+  background-image: conic-gradient(
+    from 1turn,
+    rgba(136, 83, 252, 1),
+    rgba(110, 52, 226, 1)
+  );
+}
+
+.ui-button-sports {
+  color: #fff;
+  background-color: #1d803ab3;
+  background-image: conic-gradient(
+    from 1turn,
+    rgba(88, 175, 16, 1),
+    rgba(29, 128, 58, 1)
+  );
+}
+
+
+.loginbg{
+  background-color: rgba(72,74,83,.1);
+}

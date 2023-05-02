@@ -1,0 +1,39 @@
+import React from "react";
+import players from "../assets/players.png";
+import social from "../assets/social.PNG";
+import SimpleSlider from "./SimpleSlider";
+
+const Banner = () => {
+  return (
+    <div className=" pt-0 banner">
+      <div className=" container mx-auto  grid grid-cols-2 ju">
+        <div class="p-5">
+          <div class="flex flex-col space-y-10">
+            <div class="text-2xl text-white font-[400] uppercase">
+              Sign Up &amp; <span class="text-[#3BC117]">Get</span> Reward
+            </div>
+            <div class="text-6xl uppercase font-[600] text-white">
+              <span>Up to</span>
+              <b class="text-grad"> ৳ 2,100,000</b>
+            </div>
+            <div class="flex items-center space-x-5">
+              <button class="btn-grad text-white font-[500] px-8 py-3">
+                Sign Up Now
+              </button>
+              <div class="text-xl text-slate-300 text-white">or</div>
+              <div class="other-group">
+                <img src={social} />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img src={players} />
+        </div>
+      </div>
+      <SimpleSlider/>
+    </div>
+  );
+};
+
+export default Banner;
