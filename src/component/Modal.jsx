@@ -12,7 +12,7 @@ import WalletConnectModal from "./WalletConnectModal";
 import ImportWallet from "./ImportWallet";
 
 const SignInModal = ({ exsistAcc, setExsistAcc, setUser, setShowModal }) => (
-  <div className="bg-[#1C1E22] z-10 rounded-sm lg:mt-20  border border-[#1c1d20] drop-shadow-xl">
+  <div className="bg-[#1C1E22] relative z-10 rounded-sm lg:mt-20  border border-[#1c1d20] drop-shadow-xl">
     <div className="grid lg:grid-cols-2 grid-cols-1 overflow-y-auto lg:w-[850px] w-full">
       <AiOutlineClose
         onClick={() => setShowModal(false)}
