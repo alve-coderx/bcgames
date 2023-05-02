@@ -82,16 +82,16 @@ const SignInModal = ({ exsistAcc, setExsistAcc, setUser, setShowModal }) => (
 const WalletModal = ({
   setImportWallet,
   setWalletCn,
-  setUser,
   importWallet,
   walletCn,
+  setShowModal,
 }) => (
-  <div className="lg:w-[420px] w-[22.6rem] border border-slate-800 py-4 lg:px-4 md:px-9 px-4 top-0  bg-[#1C1E22] drop-shadow-2xl">
+  <div className="lg:w-[420px] w-[22.6rem] bg-[#1C1E22]  border border-slate-800 py-4 lg:px-4 md:px-9 px-4   drop-shadow-2xl">
     <>
       <div className="flex items-center justify-between font-[600] text-lg ">
         <p className="text-[#3BC117] text-xl">Connect a wallet</p>
         <AiOutlineClose
-          onClick={() => setUser(false)}
+          onClick={() => setShowModal(false)}
           className="font-[700]  text-xl cursor-pointer text-[#3BC117]  "
         />
       </div>
@@ -165,29 +165,18 @@ const WalletModal = ({
 );
 
 const Modal = ({ setShowModal }) => {
-  const [exsistAcc, setExsistAcc] = useState(true);
-  const [user, setUser] = useState(false);
   const [importWallet, setImportWallet] = useState(false);
   const [walletCn, setWalletCn] = useState(false);
 
   return (
-    <div className="transition-10 duration-50 justify-center items-center flex fixed inset-0 top-96 outline-0 ">
-      {user ? (
-        <WalletModal
-          setWalletCn={setWalletCn}
-          setImportWallet={setImportWallet}
-          walletCn={walletCn}
-          importWallet={importWallet}
-          setUser={setUser}
-        />
-      ) : (
-        <SignInModal
-          setShowModal={setShowModal}
-          setUser={setUser}
-          exsistAcc={exsistAcc}
-          setExsistAcc={setExsistAcc}
-        />
-      )}
+    <div className="transition-10 duration-50 justify-center items-center flex fixed inset-0 top-80 z-50 outline-none focus:outline-none">
+      <WalletModal
+        setWalletCn={setWalletCn}
+        setImportWallet={setImportWallet}
+        walletCn={walletCn}
+        importWallet={importWallet}
+        setShowModal={setShowModal}
+      />
     </div>
   );
 };

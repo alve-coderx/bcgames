@@ -1,13 +1,11 @@
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
-import {
-  AiOutlineShoppingCart,
-} from "react-icons/ai";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 import Modal from "./Modal";
-import logo from '../assets/logo.webp';
+import logo from "../assets/logo.webp";
 
-export default function Example({showModal,setShowModal}) {
+export default function Example({ showModal, setShowModal }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -19,27 +17,31 @@ export default function Example({showModal,setShowModal}) {
             aria-label="Global"
           >
             <div>
-              <img src={logo} alt="logo" className="w-28"/>
+              <img src={logo} alt="logo" className="w-28" />
             </div>
             <div className="flex items-center gap-x-5">
-              <button
-                onClick={() => setShowModal(true)}
-                className="lg:text-md text-xs cursor-pointer font-[400] text-slate-300 shadow-[#E8296F]"
-              >
-                Sign in
-              </button>
-              {showModal && (
-                <Modal showModal={showModal} setShowModal={setShowModal} />
-              )}
-              <button
-                onClick={() => setShowModal(true)}
-                className="lg:text-md text-xs cursor-pointer font-[400] ui-button-sports lg:px-8 px-4 py-1 rounded-sm lg:py-3 text-white shadow-[#E8296F]"
-              >
-                Sign Up
-              </button>
-              {showModal && (
-                <Modal showModal={showModal} setShowModal={setShowModal} />
-              )}
+              <div>
+                <button
+                  onClick={() => setShowModal(true)}
+                  className="lg:text-md text-xs cursor-pointer font-[400] text-slate-300 shadow-[#E8296F]"
+                >
+                  Sign in
+                </button>
+                {showModal && (
+                  <Modal showModal={showModal} setShowModal={setShowModal} />
+                )}
+              </div>
+              <div>
+                <button
+                  onClick={() => setShowModal(true)}
+                  className="lg:text-md text-xs cursor-pointer font-[400] ui-button-sports lg:px-8 px-4 py-1 rounded-sm lg:py-3 text-white shadow-[#E8296F]"
+                >
+                  Sign Up
+                </button>
+                {showModal && (
+                  <Modal showModal={showModal} setShowModal={setShowModal} />
+                )}
+              </div>
               <AiOutlineShoppingCart className="lg:text-xl text-xs cursor-pointer font-[500] text-white shadow-[#E8296F]" />
             </div>
           </nav>
