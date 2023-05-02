@@ -26,14 +26,14 @@ const Banner = ({ showModal, setShowModal }) => {
               </button>
               <div className="text-xl text-slate-300 text-white">or</div>
               <div className="other-group">
-                <img src={social} className="lg:block hidden" />
-                <img src={socialsm} className="lg:hidden block " />
+                <img alt="img" src={social} className="lg:block hidden" />
+                <img alt="img" src={socialsm} className="lg:hidden block " />
               </div>
             </div>
           </div>
         </div>
         <div>
-          <img src={players} />
+          <img alt="img" src={players} />
         </div>
       </div>
       <SimpleSlider />
